@@ -138,7 +138,7 @@ form.parse(req, function(err, fields, files) {
 });
 ```
 
-The arguments `fields` contains an object whose properties are the names of
+The argument `fields` contains an object whose properties are the names of
 the non-file fields of the submitted form and the values are their contents.
 The value of multi-valued fields (e.g., of a `<select multiple>` where multiple
 options were actually selected) is an array of the different values.
