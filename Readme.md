@@ -138,7 +138,8 @@ form.parse(req, function(err, fields, files) {
 });
 ```
 
-```form.onPart(part);
+```javascript
+form.onPart(part);
 ```
 You may overwrite this method if you are interested in directly accessing the multipart stream. Doing so will disable any `'field'` / `'file'` events  processing which would occur otherwise, making you fully responsible for handling the processing.
 
