@@ -138,6 +138,19 @@ form.parse(req, function(err, fields, files) {
 });
 ```
 
+The arguments `fields` contains an object whose properties are the names of
+the non-file fields of the submitted form and the values are their contents.
+The value of multi-valued fields (e.g., of a `<select multiple>` where multiple
+options were actually selected) is an array of the different values.
+
+The argument `files` contains an object whose properties are the names of the
+file fields of the submitted form and the values are objects describing the
+uploaded files (size, mime type, original name, etc.) and the pathname of
+the temporary file where formidable stored it.  In the (improbable) case that
+a submitted form has several file fields with the same name, the value is
+an array of such objects.
+
+
 ```javascript
 form.onPart(part);
 ```
